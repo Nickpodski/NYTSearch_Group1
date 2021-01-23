@@ -3,7 +3,7 @@ $('#submit').click(function(e) {
     e.preventDefault();
     var apiKey = 'JYmTqkVruZB7turWlXfQXOs6QxbdtLym';
     var searchQ = $('#searchQ').val();
-    var numResults = $('#numResults').val().trim();
+    var numResults = $('#numResults').val();
     var q = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchQ}&api-key=${apiKey}`;
     console.log(q);
     $.ajax({
@@ -13,7 +13,7 @@ $('#submit').click(function(e) {
         console.log(response);
         var results = response.response.docs;
         console.log(results);
-        for (var i = 0; i < results.length; i++) {
+        for (var i = 0; i < numResults; i++) {
             var newDiv = $('<div>');
             var newHeader = $('<h3>');
             var newPara = $('<p>');
@@ -30,4 +30,9 @@ $('#submit').click(function(e) {
             $('#results').prepend(newDiv);
         }
     })
+})
+
+$('#clear').click(function(e) {
+    e.preventDefault();
+    window.location.reload();
 })
