@@ -1,11 +1,14 @@
 .containerSearch, .containerResult {
     margin: 20px;
     padding: 20px;
-    border: px solid black;
+    border: 2px solid black;
     border-radius: 10px;
+    width: 80%;
 }
 
 .jumbotron {
+    display: flex;
     background-color: navy;
     color: white;
+    justify-content: center;
 }
