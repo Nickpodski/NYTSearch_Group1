@@ -1,0 +1,11 @@
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: px solid black;
+    border-radius: 10px;
+}
+
+.jumbotron {
+    background-color: navy;
+    color: white;
+}
